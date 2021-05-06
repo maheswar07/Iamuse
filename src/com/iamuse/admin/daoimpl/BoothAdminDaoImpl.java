@@ -2920,14 +2920,14 @@ public class BoothAdminDaoImpl implements BoothAdminDao {
 				 */
 
 				String emailHosting = adminboothevent.getEventHostMailerId();
-				/*
-				 * mailUtil.sendEmailUploadMailBYWebPortal( adminboothevent.getSponsorName() +
-				 * "(" + emailHosting + ")" + " <dev@iamuse.com>", emailId, path,
-				 * "Your Picture Is Ready", uploadImageEmail.getMailImageName(), rootPath +
-				 * uploadImageEmail.getMailImageUrl() + "/" + uploadImageEmail.getEventId() +
-				 * "/" + uploadImageEmail.getMailImageName(),
-				 * uploadImageEmail.getMailImageName(), ServerConstants.MAKE_TRUE, testText);
-				 */
+				
+				 mailUtil.sendEmailUploadMailBYWebPortal( adminboothevent.getSponsorName() +
+				 "(" + emailHosting + ")" + " <dev@iamuse.com>", emailId, path,
+				 "Your Picture Is Ready", uploadImageEmail.getMailImageName(), rootPath +
+				 uploadImageEmail.getMailImageUrl() + "/" + uploadImageEmail.getEventId() +
+				 "/" + uploadImageEmail.getMailImageName(),
+				 uploadImageEmail.getMailImageName(), ServerConstants.MAKE_TRUE, testText);
+				 
 			}
 			result = ServerConstants.SUCCESS;
 			sessionFactory.getCurrentSession().getTransaction().commit();
